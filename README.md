@@ -8,4 +8,4 @@ We welcome and recognize all contributions.
 
 ## Credits
 
-This project is created using the open-source static site generator [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/).
+This project is created using the open-source static site generator [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/)
