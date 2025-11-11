@@ -1,4 +1,4 @@
-# Introduction to computational linguistics and natural language processing (December 4, 2024)
+# Introduction to computational linguistics and natural language processing (November 21, 2025)
 
 Computational linguistics (CL) is a branch of linguistics that focuses on the theoretical understanding of language through computational models. In contrast, natural language processing (NLP) is an interdisciplinary field within artificial intelligence (AI) that aims to use computational models to process and generate language efficiently. NLP intersects with machine learning, statistics, and data science. While NLP is not primarily focused on linguistics, many of its approaches and tasks draw on linguistic theories to address the complexities of natural language. NLP cover a wide range of tasks, including part-of-speech tagging, named entity recognition, machine translation, speech recognition, and text summarization.
 
@@ -6,11 +6,11 @@ In this session, we will introduce some fundamental concepts and techniques in N
 
 With this in mind, the session will be organized into four main blocks. We will begin by discussing the steps involved in preparing text or a corpus for NLP applications. Next, we will explore how text can be processed at three different levels: the word level (morphology), the sentence structure level (syntax), and finally, the level of sentence meaning (semantics).
 
-The [slides for the first session](https://dlsi.ua.es/~mespla/session1tpln.pdf) are now available.
+The [slides for the first session](https://raw.githubusercontent.com/mespla/tpln2526/refs/heads/main/docs/slides/session1tpln.pdf) are now available.
 
 ## Text preprocessing
 
-### Contents to prepare before the session on 12/4/2024
+### Contents to prepare before the session on 11/21/2025
 
 As mentioned earlier, this session focuses on processing textual data. Texts come from diverse sources, languages, formats, scripts, and character encoding standards. A common preliminary step in preparing text for any NLP-related task is preprocessing it to make it suitable for the specific application. Typical preprocessing tasks include removing formatting, converting character encodings, and tokenizing. Additional steps often involve normalizing text, standardizing punctuation, and similar operations.
 
@@ -24,7 +24,7 @@ Additionally, if you are curious about how popular large language models handle 
 
 ## Morphological parsing
 
-### Contents to prepare before the session on 12/4/2024
+### Contents to prepare before the session on 11/21/2025
 
 In this section, we will explore computational approaches to modeling morphology, the study of word structure. Morphological parsing involves analyzing the components of a word to understand their role in a sentence and their contribution to the meaning of a text fragment. Morphological parsing is essential for various NLP tasks, such as word segmentation and lemmatization.
 
@@ -37,7 +37,7 @@ It is important to note that languages vary significantly in morphological compl
 
 ## Syntactic parsing
 
-### Contents to prepare before the session on 12/4/2024
+### Contents to prepare before the session on 11/21/2025
 
 Syntactic parsing involves automatically inferring the structural relationships between words in a sentence. This task is crucial for understanding the meaning of a text fragment. In this block, we will explore the technologies that enable the analysis of word relationships within sentences and how these relationships impact meaning.
 
@@ -51,7 +51,7 @@ For those interested in learning more about the Universal Dependencies project, 
 
 ## Semantic representation of text
 
-### Contents to prepare before the session on 12/4/2024
+### Contents to prepare before the session on 11/21/2025
 
 This final block of the session focuses on the semantic representation of text. In NLP, there are two main approaches to representing meaning: identifying the semantic roles of text components and producing vector-based semantic representations.
 
