@@ -1,5 +1,7 @@
 # Assignment on Mechanistic Interpretability of Transformers
 
+!!! danger
+    These materials are temporary and incomplete. If you choose to read them, you do so at your own risk.
 
 **Mechanistic interpretability** in the context of artificial intelligence seeks to provide a motivated explanation of how machine learning models function. It is a crucial approach to building trust in systems and inducing certain behaviors in them. Within the field of mechanistic interpretability, there are many techniques that can be applied to transformers. Here, we will focus on [activation patching][patching].
 

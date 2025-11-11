@@ -1,7 +1,7 @@
 # Architectures for written-text processing
 
-> [!CAUTION]
-> These materials are temporary and incomplete. If you choose to read them, you do so at your own risk.
+!!! danger
+    These materials are temporary and incomplete. If you choose to read them, you do so at your own risk.
 
 In this module, we will study some neural models used to process texts. The professor of this module is Juan Antonio Pérez Ortiz. The module begins with a review of the functioning of logistic regression, which will help us establish the necessary knowledge to understand subsequent models. Next, we study in some detail *skip-grams*, one of the algorithms for obtaining non-contextual word *embeddings*. Then, we review the functioning of *feedforward* neural architectures and study their application to language models. The ultimate goal is to address the study of the most important architecture in current text processing systems: the transformer. Once we have studied these architectures, we will conclude with an analysis of the functioning of pretrained models (foundational models) in general, and language models in particular.
 

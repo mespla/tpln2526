@@ -1,5 +1,8 @@
 # Assignment on text similarity using vectorial representations of text
 
+!!! danger
+    These materials are temporary and incomplete. If you choose to read them, you do so at your own risk.
+    
 In Natural Language Processing (NLP), one of the primary challenges is how to represent human language in a form that computers can process. This is where ***vectorized representations of text*** come into play. Text data, such as sentences, paragraphs, or entire documents, need to be converted into numerical formats to be understood by machine learning algorithms. Vectorization transforms raw text into fixed-length, dense, or sparse vectors that capture the semantic properties of the words or sentences, enabling machines to perform tasks like classification, similarity search, and recommendation.
 
 The methods you'll explore in this assignment — Bag of Words (BoW), TF-IDF, and Sentence Embeddings (SBERT) — are foundational techniques in NLP, each with its own strengths and weaknesses. Understanding these representations is critical for a wide range of applications in the field of NLP.
