@@ -7,9 +7,9 @@ In this module, we will study some neural models used to process texts. The prof
 
 Class materials complement the reading of some chapters from a textbook ("Speech and Language Processing" by Dan Jurafsky and James H. Martin, third edition draft, available online) with annotations made by the professor.
 
-## First session of this module (December 11, 2024)
+## First session of this module (December 5, 2025)
 
-### Contents to prepare before the session on Dec 11 {#before-text1}
+### Contents to prepare before the session on Dec 5 {#before-text1}
 
 The activities to complete before this class are:
 
@@ -25,9 +25,9 @@ In the in-person class (5 hours 🕒️ long), we will see how to implement a lo
 
 The idea is for you to study and slightly modify the notebooks we are working on. In a later class, a more advanced assignment involving modifying the transformer's code will be presented.
 
-## Second session (December 18, 2024)
+## Second session (December 12, 2025)
 
-### Contents to prepare before the session on Dec 18 {#before-text2}
+### Contents to prepare before the session on Dec 12 {#before-text2}
 
 The activities to complete before this class are:
 
@@ -44,7 +44,7 @@ In the in-person class (5 hours 🕒️ in duration), we will see how to impleme
 
 The idea is for you to study and slightly modify the notebooks we are working on. We will also present the [assignment](assignment-interpretability.md) on mechanistic interpretability you need to submit for this module of the course.
 
-## Third session (January 8, 2025)
+## Third session (December 19, 2025)
 
 ### Contents to prepare before the session on Jan 8 {#before-text3}
 
@@ -56,12 +56,12 @@ The activities to complete before this class are:
 - After completing the previous parts, take this [assessment test](https://forms.gle/GRK5SLc3STkup8at9) on these contents. There are few questions, and it will take you a few minutes.
 - If you have time left, take the opportunity to review all the contents from previous sessions.
 
-### Contents for the in-person session on Jan 8
+### Contents for the in-person session on Dec 19
 
 In the in-person class (5 hours 🕒️ in duration), we will see how to implement on top of our transformer architecture code both a language model based on a decoder <a target="_blank" href="https://colab.research.google.com/github/jaspock/me/blob/main/docs/materials/transformers/assets/notebooks/lmgpt.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a> and a named entity recognition model <a target="_blank" href="https://colab.research.google.com/github/jaspock/me/blob/main/docs/materials/transformers/assets/notebooks/nerbert.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a> based on an encoder.
 
 We will take the opportunity to review some aspects of the code from previous sessions and relate theoretical aspects with practical ones.
 
-## Fourth session (January 15, 2025)
+## Fourth session (January 14, 2026)
 
 This fourth session is actually the first and only session on the topic of speech. See the page on [speech](speech.md) to view the contents prior to this session.
