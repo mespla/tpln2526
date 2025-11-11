@@ -1,5 +1,8 @@
 # Architectures for Speech
 
+[!CAUTION]
+These materials are temporary and incomplete. If you choose to read them, you do so at your own risk.
+    
 In this module, we briefly study some neural models used to process speech. The professor for this module is Juan Antonio Pérez Ortiz.
 
 Class materials complement the reading of some chapters from a textbook ("Speech and Language Processing" by Dan Jurafsky and James H. Martin, third edition draft, available online) with annotations made by the professor.
