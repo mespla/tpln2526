@@ -22,7 +22,7 @@ Remember that you will need to be logged with your GCloud account to access the 
 
 ###Submission
 
-In this assignment, your task is to implement the different strategies to produce vector representations of text and evaluate them with the dataset described in this document. You will also be required to try the different configurations and observe the results obtained. A base CoLab notebook is provided that contains the basic structure of the work to be done in this assignment. Follow the instructions in this document to both implement the solutions and to describe the results obtained and the conclusions drawn from this work. Once this is done, you should download the resulting CoLab notebook and submit it via the UACloud tutoring system before 23:55 on Sunday, December 7, 2025. The assignment must be done in pairs. Remember to include both authors' names in the notebook.
+In this assignment, your task is to implement the different strategies to produce vector representations of text and evaluate them with the dataset described in this document. You will also be required to try the different configurations and observe the results obtained. A base CoLab notebook is provided that contains the basic structure of the work to be done in this assignment. Follow the instructions in this document to both implement the solutions and to describe the results obtained and the conclusions drawn from this work. Once this is done, you should download the resulting CoLab notebook and submit it via the UACloud tutoring system before 23:55 on Sunday, December 14, 2025. The assignment must be done in pairs. Remember to include both authors' names in the notebook.
 
 ## Part 1: Bag of Words (BoW) and TF-IDF Vectorization with Scikit-Learn
 
