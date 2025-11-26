@@ -18,7 +18,7 @@ The activities to complete before this class are:
 - Reading and studying the contents of [this page](https://dlsi.ua.es/~japerez/materials/transformers/en/embeddings/) on embeddings. As you will see, the page indicates which contents you should read from the book. After a first reading, read the professor's annotations to help you understand the key concepts of the chapter. Then, perform a second reading of the chapter from the book. In total, this part should take you about 3 hours 🕒️ of work.
 - After completing the previous parts, take this [assessment test](https://forms.gle/V3U9MTHo7c9DNhkc6) on these contents. There are few questions, and it will take you a few minutes.
 
-### Contents for the in-person session on Dec 11
+### Contents for the in-person session on Dec 5
 
 In the in-person class (5 hours 🕒️ long), we will see how to implement a logistic regressor in PyTorch by following the implementations of a binary logistic regressor <a href="https://colab.research.google.com/github/jaspock/me/blob/main/docs/materials/transformers/assets/notebooks/logistic.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a> and a multinomial one <a href="https://colab.research.google.com/github/jaspock/me/blob/main/docs/materials/transformers/assets/notebooks/softmax.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a> discussed in [this section](https://dlsi.ua.es/~japerez/materials/transformers/en/implementacion/#code-regressor). We will also explore an implementation of the skip-gram algorithm <a target="_blank" href="https://colab.research.google.com/github/jaspock/me/blob/main/docs/materials/transformers/assets/notebooks/skipgram.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a> discussed [here](https://dlsi.ua.es/~japerez/materials/transformers/en/implementacion/#code-skipgrams).
@@ -36,7 +36,7 @@ The activities to complete before this class are:
 - After completing the previous parts, take this [assessment test](https://forms.gle/7KDwRtXcrpxsKjHp7) on these contents. There are few questions, and it will take you a few minutes.
 - If you have time left, take the opportunity to review the contents of the first session.
 
-### Contents for the in-person session on Dec 18
+### Contents for the in-person session on Dec 12
 
 In the in-person class (5 hours 🕒️ in duration), we will see how to implement in PyTorch a language model based on a feedforward neural network <a target="_blank" href="https://colab.research.google.com/github/jaspock/me/blob/main/docs/materials/transformers/assets/notebooks/ffnn.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>, and a transformer <a target="_blank" href="https://colab.research.google.com/github/jaspock/me/blob/main/docs/materials/transformers/assets/notebooks/transformer.ipynb">
@@ -46,7 +46,7 @@ The idea is for you to study and slightly modify the notebooks we are working on
 
 ## Third session (December 19, 2025)
 
-### Contents to prepare before the session on Jan 8 {#before-text3}
+### Contents to prepare before the session on Jan 19 {#before-text3}
 
 The activities to complete before this class are:
 
