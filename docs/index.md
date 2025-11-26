@@ -10,8 +10,8 @@
 -->
 <!-- - Assignments before the class of Jan 14, 2026: Read the materials related to speech recognition, linked in this [section](speech.md#before-speech1) and then complete [this test](https://forms.gle/woGk9hkmepMVkrg47) (deadline: 23:59 CET, Jan 13 2026).
 - Assignments before the class of Dec 19, 2025: Read the materials related to full encoder-decoder transformer models, encoder-like transformers, large language models and multilingual models linked in this [section](text.md#before-text3) and then complete [this test](https://forms.gle/GRK5SLc3STkup8at9) (deadline: 23:59 CET, Dec 18 2025).
-- Assignments before the class of Dec 12, 2025: Read the materials related to feedforward neural networks and transformers, linked in this [section](text.md#before-text2) and then complete [this test](https://forms.gle/7KDwRtXcrpxsKjHp7) (deadline: 23:59 CET, Dec 17 2025).
-- Assignments before the class of Dec 5, 2025: read the materials related to logistic regressors, embeddings and PyTorch linked in this [section](text.md#before-text1) and then complete [this test](https://forms.gle/V3U9MTHo7c9DNhkc6) (deadline: 23:59 CET, Dec 10 2025). -->
+- Assignments before the class of Dec 12, 2025: Read the materials related to feedforward neural networks and transformers, linked in this [section](text.md#before-text2) and then complete [this test](https://forms.gle/7KDwRtXcrpxsKjHp7) (deadline: 23:59 CET, Dec 17 2025). -->
+- Assignments before the class of Dec 5, 2025: read the materials related to logistic regressors, embeddings and PyTorch linked in this [section](text.md#before-text1) and then complete [this test](https://forms.gle/V3U9MTHo7c9DNhkc6) (deadline: 23:59 CET, Dec 04 2025). 
 - Assignments before the class of Nov 21, 2025: read the contents of section [Introduction to computational linguistics and natural language processing](cl.md); after that, complete [this test](https://forms.gle/e17kghu2jdu3iiYp6) (deadline: 23:59 CET, Nov 20 2025).
 
 ## Course Syllabus and Rules
