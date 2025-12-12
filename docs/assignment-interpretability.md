@@ -47,7 +47,7 @@ Some additional corrupted texts that may be interesting to explore are, for exam
 
 ## Submission
 
-In this assignment, your task is to write the code to generate graphs and probabilities like those above, propose your own clean and corrupted texts (try to be creative and avoid studying very similar texts or phenomena), perform a similar analysis, and write a report in a document of 1000–1500 words (both limits are strict). In this document, you should present and explain the implemented code, along with your approach, results, and relevant conclusions. Original ideas and additional experiments are welcome. The document in PDF format must be submitted via the UACloud *evaluation tools* **before 23:55 on Sunday, January 18, 2026** (Alicante time). The assignment must be done in pairs. Remember to include both authors' names in the document.
+In this assignment, your task is to write the code to generate graphs and probabilities like those above, propose your own clean and corrupted texts (try to be creative and avoid studying very similar texts or phenomena), perform a similar analysis, and write a report in a document of 1000–1500 words (both limits are strict). In this document, you should present and explain the implemented code, along with your approach, results, and relevant conclusions. Original ideas and additional experiments are welcome. The document in PDF format must be submitted via the UACloud *evaluation tools* **before 23:55 on Sunday, January 26, 2026** (Alicante time). The assignment must be done in pairs. Remember to include both authors' names in the document.
 
 ## Base Code 
 
