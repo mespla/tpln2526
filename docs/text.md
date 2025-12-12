@@ -42,6 +42,9 @@ In the in-person class (5 hours 🕒️ in duration), we will see how to impleme
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>, and a transformer <a target="_blank" href="https://colab.research.google.com/github/jaspock/me/blob/main/docs/materials/transformers/assets/notebooks/transformer.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a> following the implementations discussed in [this section](https://www.dlsi.ua.es/~japerez/materials/transformers/implementacion/#code-transformer) and the next two.
 
+A very similar notebook to the one of the feedforward neural network but focused on the self-supervised learning of word embeddings <a target="_blank" href="https://colab.research.google.com/github/jaspock/me/blob/main/docs/materials/transformers/assets/notebooks/embeddings-ffnn.ipynb">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a> is also available.
+
 The idea is for you to study and slightly modify the notebooks we are working on. We will also present the [assignment](assignment-interpretability.md) on mechanistic interpretability you need to submit for this module of the course.
 
 ## Third session (December 19, 2025)
