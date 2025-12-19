@@ -1,0 +1,802 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../assignment-searchinvectorialspace/">
+      
+      
+        <link rel="next" href="../speech/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Introduction to computational linguistics and natural language processing (November 21, 2025) - Natural Language Processing Techniques</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduction-to-computational-linguistics-and-natural-language-processing-november-21-2025" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Natural Language Processing Techniques" class="md-header__button md-logo" aria-label="Natural Language Processing Techniques" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Natural Language Processing Techniques
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Introduction to computational linguistics and natural language processing (November 21, 2025)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Natural Language Processing Techniques" class="md-nav__button md-logo" aria-label="Natural Language Processing Techniques" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Natural Language Processing Techniques
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Natural Language Processing Techniques, 2025-2026
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../assignment-interpretability/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Assignment on Mechanistic Interpretability of Transformers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../assignment-searchinvectorialspace/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Assignment on text similarity using vectorial representations of text
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction to computational linguistics and natural language processing (November 21, 2025)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction to computational linguistics and natural language processing (November 21, 2025)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#text-preprocessing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Text preprocessing
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Text preprocessing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contents-to-prepare-before-the-session-on-11212025" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contents to prepare before the session on 11/21/2025
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#morphological-parsing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Morphological parsing
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Morphological parsing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contents-to-prepare-before-the-session-on-11212025_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contents to prepare before the session on 11/21/2025
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-optional-material" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Additional optional material:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#syntactic-parsing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Syntactic parsing
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Syntactic parsing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contents-to-prepare-before-the-session-on-11212025_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contents to prepare before the session on 11/21/2025
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-optional-material_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Additional optional material:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#semantic-representation-of-text" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Semantic representation of text
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Semantic representation of text">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contents-to-prepare-before-the-session-on-11212025_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contents to prepare before the session on 11/21/2025
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../speech/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architectures for Speech
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../text/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architectures for written-text processing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#text-preprocessing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Text preprocessing
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Text preprocessing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contents-to-prepare-before-the-session-on-11212025" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contents to prepare before the session on 11/21/2025
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#morphological-parsing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Morphological parsing
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Morphological parsing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contents-to-prepare-before-the-session-on-11212025_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contents to prepare before the session on 11/21/2025
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-optional-material" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Additional optional material:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#syntactic-parsing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Syntactic parsing
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Syntactic parsing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contents-to-prepare-before-the-session-on-11212025_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contents to prepare before the session on 11/21/2025
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-optional-material_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Additional optional material:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#semantic-representation-of-text" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Semantic representation of text
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Semantic representation of text">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contents-to-prepare-before-the-session-on-11212025_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contents to prepare before the session on 11/21/2025
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="introduction-to-computational-linguistics-and-natural-language-processing-november-21-2025">Introduction to computational linguistics and natural language processing (November 21, 2025)<a class="headerlink" href="#introduction-to-computational-linguistics-and-natural-language-processing-november-21-2025" title="Permanent link">&para;</a></h1>
+<p>Computational linguistics (CL) is a branch of linguistics that focuses on the theoretical understanding of language through computational models. In contrast, natural language processing (NLP) is an interdisciplinary field within artificial intelligence (AI) that aims to use computational models to process and generate language efficiently. NLP intersects with machine learning, statistics, and data science. While NLP is not primarily focused on linguistics, many of its approaches and tasks draw on linguistic theories to address the complexities of natural language. NLP cover a wide range of tasks, including part-of-speech tagging, named entity recognition, machine translation, speech recognition, and text summarization.</p>
+<p>In this session, we will introduce some fundamental concepts and techniques in NLP, focusing specifically on text as the medium of natural language, rather than speech. While historically NLP has concentrated on English and a few major languages, recent years have seen a shift towards a more multilingual focus, with growing interest in low-resource languages.</p>
+<p>With this in mind, the session will be organized into four main blocks. We will begin by discussing the steps involved in preparing text or a corpus for NLP applications. Next, we will explore how text can be processed at three different levels: the word level (morphology), the sentence structure level (syntax), and finally, the level of sentence meaning (semantics).</p>
+<p>The <a href="https://raw.githubusercontent.com/mespla/tpln2526/refs/heads/main/docs/slides/session1tpln.pdf">slides for the first session</a> are now available.</p>
+<h2 id="text-preprocessing">Text preprocessing<a class="headerlink" href="#text-preprocessing" title="Permanent link">&para;</a></h2>
+<h3 id="contents-to-prepare-before-the-session-on-11212025">Contents to prepare before the session on 11/21/2025<a class="headerlink" href="#contents-to-prepare-before-the-session-on-11212025" title="Permanent link">&para;</a></h3>
+<p>As mentioned earlier, this session focuses on processing textual data. Texts come from diverse sources, languages, formats, scripts, and character encoding standards. A common preliminary step in preparing text for any NLP-related task is preprocessing it to make it suitable for the specific application. Typical preprocessing tasks include removing formatting, converting character encodings, and tokenizing. Additional steps often involve normalizing text, standardizing punctuation, and similar operations.</p>
+<p>A helpful introduction to these strategies and their implications for various NLP tasks can be found in the article <a href="https://www.cambridge.org/core/services/aop-cambridge-core/content/view/43A20821D65F1C0C4366B126FC794AE3/S1351324922000213a.pdf/comparison-of-text-preprocessing-methods.pdf"><em>Comparison of text preprocessing methods</em></a>, which you are required to read before class. You only need to read until Section 3.5, as the strategies described in Sections 3.6 and 3.7 are not that frequent for many NLP tasks, and Section 4 describes datasets that are not relevant for this session. 1.5 hours 🕒️ in duration.</p>
+<p>The article focuses on tokenization at the word level. However, most neural-network-based approaches rely on subword-level tokenization, which involves splitting words into fragments ranging from single characters to character groups. Some popular subword-level tokenization techniques include byte-pair encoding (BPE), unigram, and SentencePiece.</p>
+<p>A concise and intuitive explanation of these methods can be found in the <a href="https://huggingface.co/docs/transformers/main/tokenizer_summary"><em>Tokenizers</em></a> section of the HuggingFace Transformers tutorial. Scroll to the end of the page for an overview of how these subword tokenization strategies work. 0.5 hours 🕒️ in duration.</p>
+<p>Additionally, if you are curious about how popular large language models handle subword tokenization, explore the <a href="https://tiktokenizer.vercel.app">Tiktokenizer</a>. This tool simulates the tokenization process of several well-known generative neural models. Select a model from the dropdown menu in the upper-right corner and input a short text to see an example of subword tokenization. Try experimenting with texts in different languages to observe how these models manage multilingual input.</p>
+<h2 id="morphological-parsing">Morphological parsing<a class="headerlink" href="#morphological-parsing" title="Permanent link">&para;</a></h2>
+<h3 id="contents-to-prepare-before-the-session-on-11212025_1">Contents to prepare before the session on 11/21/2025<a class="headerlink" href="#contents-to-prepare-before-the-session-on-11212025_1" title="Permanent link">&para;</a></h3>
+<p>In this section, we will explore computational approaches to modeling morphology, the study of word structure. Morphological parsing involves analyzing the components of a word to understand their role in a sentence and their contribution to the meaning of a text fragment. Morphological parsing is essential for various NLP tasks, such as word segmentation and lemmatization.</p>
+<p>It is important to note that languages vary significantly in morphological complexity. For languages with complex morphology, morphology-aware NLP models have shown to be particularly effective, especially when only limited data is available for these languages. The paper <a href="https://aclanthology.org/2022.findings-acl.80.pdf"><em>Morphological Processing of Low-Resource Languages: Where We Are and What’s Next</em></a> offers a comprehensive overview of the state-of-the-art techniques in morphology analysis, with a focus on low-resource languages. These languages are especially challenging due to the scarcity of data for training state-of-the-art models. 1 hour 🕒️ in duration.</p>
+<h3 id="additional-optional-material">Additional <strong>optional</strong> material:<a class="headerlink" href="#additional-optional-material" title="Permanent link">&para;</a></h3>
+<ul>
+<li>An ambitious effort in recent years to create a comprehensive knowledge base for morphology across many languages is the UniMorph project. The paper <a href="https://aclanthology.org/L18-1293v2.pdf"><em>UniMorph 2.0: Universal Morphology</em></a> provides a detailed overview of this initiative.</li>
+<li>For a broader perspective on how computational approaches have addressed morphology over the decades, I recommend the chapter <a href="https://ling.auf.net/lingbuzz/007366/current.pdf?_s=R2w2FR3x92UHOOwt"><em>Computational morphology</em></a> in the book <em>What is Morphology?</em>, edited by Mark Aronoff and Kirsten Fudeman (Wiley Blackwell, 2022). This chapter covers the evolution of computational morphology, from rule-based methods using finite-state automata to statistical approaches based on hidden Markov models.</li>
+</ul>
+<h2 id="syntactic-parsing">Syntactic parsing<a class="headerlink" href="#syntactic-parsing" title="Permanent link">&para;</a></h2>
+<h3 id="contents-to-prepare-before-the-session-on-11212025_2">Contents to prepare before the session on 11/21/2025<a class="headerlink" href="#contents-to-prepare-before-the-session-on-11212025_2" title="Permanent link">&para;</a></h3>
+<p>Syntactic parsing involves automatically inferring the structural relationships between words in a sentence. This task is crucial for understanding the meaning of a text fragment. In this block, we will explore the technologies that enable the analysis of word relationships within sentences and how these relationships impact meaning.</p>
+<p>For a solid introduction to computational syntax and syntactic parsing, I recommend watching <a href="https://www.youtube.com/watch?v=f-3N0stPtbw"><em>Depenency Parsing</em></a>, a lecture by Graham Neubig from the <em>Multilingual Natural Language Processing</em> course at Carnegie Mellon University's Language Technology Institute (2022). The video is divided into two parts, but you only need to watch the first part, which ends at approximately minute 38. This lecture compares the two main syntactic parsing approaches—constituent parsing and dependency parsing—highlighting their advantages in multilingual contexts. It also covers key resources and tools, including the Universal Dependencies (UD) treebank, a foundational resource for multilingual dependency parsing, and discusses the primary applications of syntax in NLP. 0.75 hours  🕒️ in duration.</p>
+<p>As mentioned earlier, Universal Dependencies is one of the most widely used resources for training models in dependency parsing. Several tools and libraries leverage this resource, including the Stanza library, developed by the Stanford NLP research group. To prepare for this session, familiarize yourself with Stanza using the <a href="https://applied-language-technology.mooc.fi/html/notebooks/part_iii/01_multilingual_nlp.html"><em>Multilingual Text Processing</em></a> tutorial on the Applied Language Technology platform of the University of Helsinki. 1.25 hours 🕒️ in duration.</p>
+<h3 id="additional-optional-material_1">Additional <strong>optional</strong> material:<a class="headerlink" href="#additional-optional-material_1" title="Permanent link">&para;</a></h3>
+<p>For those interested in learning more about the Universal Dependencies project, I recommend a recent <a href="https://www.youtube.com/watch?v=rIo44KZ9nTc">lecture</a> by Joakim Nivre, one of the project’s founders, delivered at the Institute of Formal and Applied Linguistics, Charles University (Czech Republic) in April 2024. The lecture, available as a one-hour video, provides deeper insights into the project.</p>
+<h2 id="semantic-representation-of-text">Semantic representation of text<a class="headerlink" href="#semantic-representation-of-text" title="Permanent link">&para;</a></h2>
+<h3 id="contents-to-prepare-before-the-session-on-11212025_3">Contents to prepare before the session on 11/21/2025<a class="headerlink" href="#contents-to-prepare-before-the-session-on-11212025_3" title="Permanent link">&para;</a></h3>
+<p>This final block of the session focuses on the semantic representation of text. In NLP, there are two main approaches to representing meaning: identifying the semantic roles of text components and producing vector-based semantic representations.</p>
+<p>The first approach, inspired by linguistic theories of semantic analysis, involves automatically labeling roles such as <em>experiencer</em>, <em>agent</em>, <em>theme</em>, or <em>goal</em> within a text fragment. For instance, in the sentence <em>John broke the window with a rock</em>, we could label <em>John</em> as the <em>agent</em>, <em>broke the window</em> as the <em>theme</em>, and <em>with a rock</em> as the <em>instrument</em>. This task, known as <strong>semantic role labeling</strong>, has been crucial in NLP for many years. For example, it has enhanced machine translation systems, particularly for languages with strong divergences in the way meaning is expressed from a morphological and syntactic point of view.</p>
+<p>The second approach, <strong>vector semantics</strong>, focuses on building numerical representations (vectors) that capture the meaning of a text fragment. These semantic vectors are essential for various NLP tasks, including information retrieval and question answering, and they form a foundational component of neural-network-based NLP models.</p>
+<p>In this block, we will focus on vector semantics. For a solid introduction to the basics of this topic, refer to <a href="https://web.stanford.edu/~jurafsky/slp3/6.pdf">Chapter 6 of <em>Speech and Language Processing</em></a> by Daniel Jurafsky and James H. Martin (2024). You only need to read up to Section 6.5; some of the remaining sections will be covered in later sessions. 1 hour 🕒️ in duration.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,897 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../assignment-interpretability/">
+      
+      
+        <link rel="next" href="../cl/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Assignment on text similarity using vectorial representations of text - Natural Language Processing Techniques</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#assignment-on-text-similarity-using-vectorial-representations-of-text" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Natural Language Processing Techniques" class="md-header__button md-logo" aria-label="Natural Language Processing Techniques" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Natural Language Processing Techniques
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Assignment on text similarity using vectorial representations of text
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Natural Language Processing Techniques" class="md-nav__button md-logo" aria-label="Natural Language Processing Techniques" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Natural Language Processing Techniques
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Natural Language Processing Techniques, 2025-2026
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../assignment-interpretability/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Assignment on Mechanistic Interpretability of Transformers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Assignment on text similarity using vectorial representations of text
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Assignment on text similarity using vectorial representations of text
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction-to-the-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introduction to the work
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction to the work">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#submission" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Submission
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-1-bag-of-words-bow-and-tf-idf-vectorization-with-scikit-learn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 1: Bag of Words (BoW) and TF-IDF Vectorization with Scikit-Learn
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 1: Bag of Words (BoW) and TF-IDF Vectorization with Scikit-Learn">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-preprocessing-the-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Preprocessing the Data
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-building-the-bow-and-tf-idf-representations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Building the BoW and TF-IDF Representations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-similarity-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Similarity Search
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-analysis-of-the-results-obtained" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Analysis of the results obtained
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-2-sentence-embeddings-with-sentencetransformers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 2: Sentence Embeddings with SentenceTransformers
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 2: Sentence Embeddings with SentenceTransformers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-trying-a-general-purpose-small-monolingual-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Trying a general purpose small monolingual model
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-comparing-other-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Comparing other models
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-moving-to-a-multilingual-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Moving to a multilingual environment
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concluding-remarks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concluding remarks
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cl/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction to computational linguistics and natural language processing (November 21, 2025)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../speech/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architectures for Speech
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../text/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architectures for written-text processing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction-to-the-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introduction to the work
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction to the work">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#submission" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Submission
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-1-bag-of-words-bow-and-tf-idf-vectorization-with-scikit-learn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 1: Bag of Words (BoW) and TF-IDF Vectorization with Scikit-Learn
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 1: Bag of Words (BoW) and TF-IDF Vectorization with Scikit-Learn">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-preprocessing-the-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Preprocessing the Data
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-building-the-bow-and-tf-idf-representations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Building the BoW and TF-IDF Representations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-similarity-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Similarity Search
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-analysis-of-the-results-obtained" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Analysis of the results obtained
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-2-sentence-embeddings-with-sentencetransformers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 2: Sentence Embeddings with SentenceTransformers
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 2: Sentence Embeddings with SentenceTransformers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-trying-a-general-purpose-small-monolingual-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Trying a general purpose small monolingual model
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-comparing-other-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Comparing other models
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-moving-to-a-multilingual-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Moving to a multilingual environment
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concluding-remarks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concluding remarks
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="assignment-on-text-similarity-using-vectorial-representations-of-text">Assignment on text similarity using vectorial representations of text<a class="headerlink" href="#assignment-on-text-similarity-using-vectorial-representations-of-text" title="Permanent link">&para;</a></h1>
+<p>In Natural Language Processing (NLP), one of the primary challenges is how to represent human language in a form that computers can process. This is where <strong><em>vectorized representations of text</em></strong> come into play. Text data, such as sentences, paragraphs, or entire documents, need to be converted into numerical formats to be understood by machine learning algorithms. Vectorization transforms raw text into fixed-length, dense, or sparse vectors that capture the semantic properties of the words or sentences, enabling machines to perform tasks like classification, similarity search, and recommendation.</p>
+<p>The methods you'll explore in this assignment — Bag of Words (BoW), TF-IDF, and Sentence Embeddings (SBERT) — are foundational techniques in NLP, each with its own strengths and weaknesses. Understanding these representations is critical for a wide range of applications in the field of NLP.</p>
+<h2 id="introduction-to-the-work">Introduction to the work<a class="headerlink" href="#introduction-to-the-work" title="Permanent link">&para;</a></h2>
+<p>In this task, you will work with a dataset containing a collection of article titles and their corresponding abstracts. This information has been extracted from the proceedings of the EMNLP international conference for the years 2016, 2017, and 2018. Your goal is to create vectorized representations of these articles, which can then be used to identify similarities between titles or abstracts of different papers.</p>
+<p>As part of this assignment, you will explore various strategies for constructing these vector representations and use them to compare the similarity between text fragments. Specifically, you will:</p>
+<ol>
+<li>Evaluate two word-based methods for generating sparse vector representations of text: bag-of-words and TF-IDF-weighted word vectors.</li>
+<li>Use pre-trained embedding models to generate dense representations of the same text fragments.</li>
+</ol>
+<p>This assignment will be completed in pairs. To make your work more manageable, a <a href="https://colab.research.google.com/drive/18JEqt15fu-am84cz7hpkCCGXC-KUOoEc?usp=sharing">CoLab notebook</a> has been provided. It includes the basic structure of the tasks, along with code snippets to help you complete the assignment. You will use this CoLab notebook to:</p>
+<ul>
+<li>Complete the required tasks.</li>
+<li>Describe the results you obtain.</li>
+</ul>
+<p>Remember that you will need to be logged with your GCloud account to access the CoLab notebook.</p>
+<h3 id="submission">Submission<a class="headerlink" href="#submission" title="Permanent link">&para;</a></h3>
+<p>In this assignment, your task is to implement the different strategies to produce vector representations of text and evaluate them with the dataset described in this document. You will also be required to try the different configurations and observe the results obtained. A base CoLab notebook is provided that contains the basic structure of the work to be done in this assignment. Follow the instructions in this document to both implement the solutions and to describe the results obtained and the conclusions drawn from this work. Once this is done, you should download the resulting CoLab notebook and submit it via the UACloud <em>Evaluation tools</em> before 23:59 on Sunday, December 14, 2025. The assignment must be done in pairs. Remember to include both authors' names in the notebook.</p>
+<h2 id="part-1-bag-of-words-bow-and-tf-idf-vectorization-with-scikit-learn">Part 1: Bag of Words (BoW) and TF-IDF Vectorization with Scikit-Learn<a class="headerlink" href="#part-1-bag-of-words-bow-and-tf-idf-vectorization-with-scikit-learn" title="Permanent link">&para;</a></h2>
+<p>In this section of the assignment, you will explore two widely used methods for vectorizing text: Bags of Words (BoW) and TF-IDF (Term Frequency-Inverse Document Frequency). Both techniques transform text into numerical vectors, but they capture different characteristics of the data.</p>
+<ul>
+<li><em>BoW</em>: Text fragments are converted into sparse vectors that list the words appearing in the text along with their respective counts. This method focuses exclusively on word frequency within each text fragment.</li>
+<li><em>TF-IDF</em>: This method builds on BoW by also considering the importance of a word across the entire corpus. It adjusts word counts based on how frequently the word appears in other documents, giving more weight to distinctive terms.</li>
+</ul>
+<p>You will use both approaches to vectorize the titles and abstracts of research papers and then perform a similarity search. Your task will be to identify the top 3 most similar documents for a given query.</p>
+<h3 id="step-1-preprocessing-the-data">Step 1: Preprocessing the Data<a class="headerlink" href="#step-1-preprocessing-the-data" title="Permanent link">&para;</a></h3>
+<p>Before applying either BoW or TF-IDF, it is important to preprocess the text data to ensure that it is in a usable form. The dataset you will be working with is in the JSON format. In the CoLab mentioned above you have the code snippet to download and store it locally. For each research paper in the dataset, the JSON file contains:</p>
+<ol>
+<li>The title of the paper.</li>
+<li>The abstract of the paper.</li>
+<li>The URL of the paper.</li>
+<li>The venue in which it was presented.</li>
+<li>The year of publication of the work.</li>
+</ol>
+<p>From these fields, you will only build vectorized representations on the title and the abstract. To do so, you can concatenate them in a single string:</p>
+<div class="highlight"><pre><span></span><code>   <span class="n">df</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;abstract&#39;</span><span class="p">]</span>
+</code></pre></div>
+<h3 id="step-2-building-the-bow-and-tf-idf-representations">Step 2: Building the BoW and TF-IDF Representations<a class="headerlink" href="#step-2-building-the-bow-and-tf-idf-representations" title="Permanent link">&para;</a></h3>
+<p>You will now create vectorized representations of the documents using Bag of Words (BoW) and TF-IDF. Both techniques are implemented in the <code>scikit-learn</code> library. To build BoW vectors, you will be using the <a href="https://scikit-learn.org/1.5/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html">CountVectorizer</a> class, that automatically transforms a collection of fragment of text into a matrix of vectors consisting of a set of vectors containing the occurrences of each word. For the TF-IDF vectors, you will be using the <a href="https://scikit-learn.org/1.5/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html#sklearn.feature_extraction.text.TfidfVectorizer">TfidfVectorizer</a> class. You can use the method <code>fit_transform</code>, that takes a list of strings and creates the set of vectors representing a collection of documents. Have a look to the vectors obtained and comment in the notebook their format and their size. Have a look to the documentation of these vectorizers to better understand what do they mean.</p>
+<p>A relevant aspect when producing vectorized representations building on words is <em>text preprocessing</em>. These vectorization methods allow some level of customization of the pre-processing steps carried out. For example, text is lowercased by default. In the same way, punctuation is ignored. However, some of these parameters can be modified; try, at least, enabling and disabling:</p>
+<ul>
+<li>Lowercasing the text</li>
+<li>Removing stop-words (you can use <code>stop_words='english'</code> in <code>CountVectorizer</code> or <code>TfidfVectorizer</code> to automatically handle this step)</li>
+</ul>
+<p>Analyse the differences obtained when changing these parameters and provide a short discussion of the results.</p>
+<h3 id="step-3-similarity-search">Step 3: Similarity Search<a class="headerlink" href="#step-3-similarity-search" title="Permanent link">&para;</a></h3>
+<p>After creating the vector representations for the entire dataset, you will perform vector comparisons to identify similarities between these representations. In this step, you will compare the representations of three new queries against the entire dataset. Each query consists of the title and abstract of a paper published in different journals and international conferences. These queries are:</p>
+<ul>
+<li>Query 1:<ul>
+<li><em>Title</em>: QUALES: Machine translation quality estimation via supervised and unsupervised machine learning.</li>
+<li><em>Abstract</em>: The automatic quality estimation (QE) of machine translation consists in measuring the quality of translations without access to human references, usually via machine learning approaches. A good QE system can help in three aspects of translation processes involving machine translation and post-editing: increasing productivity (by ruling out poor quality machine translation), estimating costs (by helping to forecast the cost of post-editing) and selecting a provider (if several machine translation systems are available). Interest in this research area has grown significantly in recent years, leading to regular shared tasks in the main machine translation conferences and intense scientific activity. In this article we review the state of the art in this research area and present project QUALES, which is under development. </li>
+</ul>
+</li>
+<li>Query 2:<ul>
+<li><em>Title</em>: Learning to Ask Unanswerable Questions for Machine Reading Comprehension</li>
+<li><em>Abstract</em>: Machine reading comprehension with unanswerable questions is a challenging task. In this work, we propose a data augmentation technique by automatically generating relevant unanswerable questions according to an answerable question paired with its corresponding paragraph that contains the answer. We introduce a pair-to-sequence model for unanswerable question generation, which effectively captures the interactions between the question and the paragraph. We also present a way to construct training data for our question generation models by leveraging the existing reading comprehension dataset. Experimental results show that the pair-to-sequence model performs consistently better compared with the sequence-to-sequence baseline. We further use the automatically generated unanswerable questions as a means of data augmentation on the SQuAD 2.0 dataset, yielding 1.9 absolute F1 improvement with BERT-base model and 1.7 absolute F1 improvement with BERT-large model.</li>
+</ul>
+</li>
+<li>Query 3:<ul>
+<li><em>Title</em>: Unsupervised Neural Text Simplification</li>
+<li><em>Abstract</em>: The paper presents a first attempt towards unsupervised neural text simplification that relies only on unlabelled text corpora. The core framework is composed of a shared encoder and a pair of attentional-decoders, crucially assisted by discrimination-based losses and denoising. The framework is trained using unlabelled text collected from en-Wikipedia dump. Our analysis (both quantitative and qualitative involving human evaluators) on public test data shows that the proposed model can perform text-simplification at both lexical and syntactic levels, competitive to existing supervised methods. It also outperforms viable unsupervised baselines. Adding a few labelled pairs helps improve the performance further.</li>
+</ul>
+</li>
+</ul>
+<p>To do so, you will have to use the method <code>transform</code> of the vectorization object used to produce the vectors of the original dataset. The difference between the <code>fit_transform</code> and <code>transform</code> methods is that the first learns the vocabulary from the dataset and then produces the vectorized representations of the text fragments, while the second one uses the vocabulary already learned to produce the representation for new text fragments.</p>
+<p>Finally, to compare the vector representations of the queries against the entire dataset, you can use the cosine similarity metric. This metric computes a similarity score ranging from 1 to -1 for each pair of vectors, although negative values are rare when comparing text fragments. The interpretation of the cosine similarity score is as follows:</p>
+<ul>
+<li>A value close to 1 indicates that the two vector representations are highly similar.</li>
+<li>A value close to 0 indicates that they are barely related.</li>
+</ul>
+<p>You can use the class <code>sklearn.metrics.pairwise.cosine_similarity</code> to compute the pairwise cosine similarities across two lists of vectors. A code snippet is provided in the CoLab notebook mentioned above to sort the results obtained and to print the top 3 highest-scored matches.</p>
+<h3 id="step-4-analysis-of-the-results-obtained">Step 4: Analysis of the results obtained<a class="headerlink" href="#step-4-analysis-of-the-results-obtained" title="Permanent link">&para;</a></h3>
+<p>Spend some time analysing the results obtained with the two techniques and with the different parameters you modified. Describe your impression about the relation between the papers in the query and those found with the different approaches. You can also comment on how informative or easy to interpret are the scores Add some discussion on your conclusions in the notebook.</p>
+<h2 id="part-2-sentence-embeddings-with-sentencetransformers">Part 2: Sentence Embeddings with SentenceTransformers<a class="headerlink" href="#part-2-sentence-embeddings-with-sentencetransformers" title="Permanent link">&para;</a></h2>
+<p>In this section, you will try using  <strong>sentence embeddings</strong> for representing text with dense vectors. You will be using embedding models as provided through the <a href="https://sbert.net/docs/sentence_transformer/usage/usage.html">SentenceTransformers</a> library. Have a look to the general description to use this library in the link provided. In addition to the general description provided through the link, you can find a description of some interesting use cases, such as:</p>
+<ul>
+<li>Semantic Textual Similarity,</li>
+<li>Semantic Search,</li>
+<li>Retrieve &amp; Re-Rank,</li>
+<li>Clustering,</li>
+<li>Paraphrase Mining,</li>
+<li>Translated Sentence Mining,</li>
+<li>Image Search.</li>
+</ul>
+<p>Have a look to them for a better understanding of the capabilities of this type of embedding models.</p>
+<p>Note that, unlike BoW and TF-IDF, sentence embeddings capture the semantic meaning of sentences and documents, making them more powerful for tasks like similarity search. You will use the <a href="https://sbert.net"><strong>SentenceTransformers</strong></a> library to generate embeddings for the dataset used in <em>Part 1</em> and will again run queries to find similar documents.</p>
+<h3 id="step-1-trying-a-general-purpose-small-monolingual-model">Step 1: Trying a general purpose small monolingual model<a class="headerlink" href="#step-1-trying-a-general-purpose-small-monolingual-model" title="Permanent link">&para;</a></h3>
+<p>We will first try a small model that allows to build semantic embeddings for English: the model <code>all-MiniLM-L6-v2</code>. You have a nice example on how to obtain the <em>n</em>-top matches for a query search in a collection of embeddings using the cosine similarity at: <a href="https://www.sbert.net/examples/applications/semantic-search/README.html">https://www.sbert.net/examples/applications/semantic-search/README.html</a>.</p>
+<p>Note that in this case you will not need to specify any data preprocessing details. The pre-trained model already includes a sub-word tokenizer and takes care of this. Given that these components are trained, changing, for example, capitals, or removing words, could affect negatively to the performance of the model and the quality of the resulting embeddings.</p>
+<p>Run the semantic search, and compare the results obtained to those obtained previously, and discuss the differences observed. Also, have a look to the size and the format of the embeddings. Can you draw any conclusions from this inspection?</p>
+<h3 id="step-2-comparing-other-models">Step 2: Comparing other models<a class="headerlink" href="#step-2-comparing-other-models" title="Permanent link">&para;</a></h3>
+<p>The <code>SentenceTransformers</code> library provides easy access to a number of <a href="https://sbert.net/docs/sentence_transformer/pretrained_models.html">pretrained text embedding models</a>. Try reproducing the experiment carried out in the previous step using other models. As already mentioned, the <code>all-MiniLM-L6-v2</code> model is rather small and general purpose. By <em>small</em> it should also be understood that the size of the embeddings is small, but also that the amount of text that can parse is rather small (256 sub-word tokens, according to the documentation in the library website). You can try with larger models, such as <code>all-distilroberta-v1</code>, and also with specific purpose: the <code>SPECTER</code> model is specifically aimed at detecting the similarity between two scientific papers.</p>
+<p>Again, try to draw conclusions from the use of these different models: what is your use experience, what is the impact in the results obtained, etc. Try to describe these conclusions in the notebook.</p>
+<h3 id="step-3-moving-to-a-multilingual-environment">Step 3: Moving to a multilingual environment<a class="headerlink" href="#step-3-moving-to-a-multilingual-environment" title="Permanent link">&para;</a></h3>
+<p>Finally, you will explore the use of cross-lingual embedding models. The <code>SentenceTransformers</code> library provides a few pre-trained models of this type that enable the comparison of embeddings obtained from text fragments in different languages. You can try, for example, the model <code>distiluse-base-multilingual-cased-v1</code>. In order to be able to test the performance of these cross-lingual model, a new dataset has been created with the exact same format as the first one, but with papers extracted from the SEPLN journal. This journal allows papers in Spanish and in English. Try following the same steps you followed before with and search for the same query papers, but now on this bilingual dataset. Compare the results obtained when using a monolingual model and a cross-lingual model to obtain the embeddings. Once more, comment on your observations and the conclusions you are able to draw from them.</p>
+<h2 id="concluding-remarks">Concluding remarks<a class="headerlink" href="#concluding-remarks" title="Permanent link">&para;</a></h2>
+<p>After this evaluation, you have explored different strategies to obtain vector representations of text. End your notebook with a general overview of the work done and your experience in comparing these models. Try to identify the strengths and the weaknesses of the different methods compared and discuss them.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

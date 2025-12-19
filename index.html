@@ -1,0 +1,575 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+        <link rel="next" href="assignment-interpretability/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Natural Language Processing Techniques</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#natural-language-processing-techniques-2025-2026" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="Natural Language Processing Techniques" class="md-header__button md-logo" aria-label="Natural Language Processing Techniques" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Natural Language Processing Techniques
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Natural Language Processing Techniques, 2025-2026
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Natural Language Processing Techniques" class="md-nav__button md-logo" aria-label="Natural Language Processing Techniques" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Natural Language Processing Techniques
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Natural Language Processing Techniques, 2025-2026
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Natural Language Processing Techniques, 2025-2026
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#homework-assignments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Homework Assignments
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#course-syllabus-and-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Course Syllabus and Rules
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="assignment-interpretability/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Assignment on Mechanistic Interpretability of Transformers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="assignment-searchinvectorialspace/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Assignment on text similarity using vectorial representations of text
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="cl/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction to computational linguistics and natural language processing (November 21, 2025)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="speech/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architectures for Speech
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="text/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architectures for written-text processing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#homework-assignments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Homework Assignments
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#course-syllabus-and-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Course Syllabus and Rules
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="natural-language-processing-techniques-2025-2026">Natural Language Processing Techniques, 2025-2026<a class="headerlink" href="#natural-language-processing-techniques-2025-2026" title="Permanent link">&para;</a></h1>
+<h2 id="homework-assignments">Homework Assignments<a class="headerlink" href="#homework-assignments" title="Permanent link">&para;</a></h2>
+<!--
+- Assignments **before the class of Jan 19, 2025**: Read the materials related to speech recognition, linked in this [section](speech.md#contenidos-a-preparar-antes-de-la-sesion-del-19012025) and then complete [this test](https://forms.gle/woGk9hkmepMVkrg47) (deadline: 23:59 CET, Jan 18 2025).
+- Assignments **before the class of Jan 17, 2025**: Read the materials related to full encoder-decoder transformer models, encoder-like transformers, large language models and multilingual models linked in this [section](text.md#contenidos-a-preparar-antes-de-la-sesion-del-17012025) and then complete [this test](https://forms.gle/GRK5SLc3STkup8at9) (deadline: 23:59 CET, Jan 16 2025).
+- Assignments before the class of Jan 10, 2025: Read the materials related to embeddings, neural networks and transformers, linked in this [section](text.md#contenidos-a-preparar-antes-de-la-sesion-del-10012025) and then complete [this test](https://forms.gle/7KDwRtXcrpxsKjHp7) (deadline: 23:59 CET, Jan 9 2025).
+- Assignments before the class of Dec 20, 2024: This class will have two parts taught by different teachers; therefore, your assignments will deal with two different topics. Firstly, read the new contents of section [_Introduction to computational linguistics and natural language processing_](cl.md); after that, complete [this test](https://forms.gle/ZkDWRSRSzB4p7Ugy7) and read the article "The Future of Computational Linguistics: On Beyond Alchemy" [here](https://www.frontiersin.org/articles/10.3389/frai.2021.625341/full) (Reading time: one hour and a half) (deadline: 23:59 CET, Dec 19 2024). Secondly, read the materials related to logistic regressors and PyTorch linked in this [section](text.md#contenidos-a-preparar-antes-de-la-sesion-del-20122024) and then complete [this test](https://forms.gle/V3U9MTHo7c9DNhkc6) (same deadline: 23:59 CET, Dec 19 2024).
+-->
+<ul>
+<li>Assignments before the class of Jan 14, 2026: Read the materials related to speech recognition, linked in this <a href="speech/#before-speech1">section</a> and then complete <a href="https://forms.gle/woGk9hkmepMVkrg47">this test</a> (deadline: 23:59 CET, Jan 13 2026).</li>
+<li>Assignments before the class of Dec 19, 2025: Read the materials related to full encoder-decoder transformer models, encoder-like transformers, large language models and multilingual models linked in this <a href="text/#before-text3">section</a> and then complete <a href="https://forms.gle/GRK5SLc3STkup8at9">this test</a> (deadline: 23:59 CET, Dec 18 2025).</li>
+<li>Assignments before the class of Dec 12, 2025: Read the materials related to feedforward neural networks and transformers, linked in this <a href="text/#before-text2">section</a> and then complete <a href="https://forms.gle/7KDwRtXcrpxsKjHp7">this test</a> (deadline: 23:59 CET, Dec 11 2025).</li>
+<li>Assignments before the class of Dec 5, 2025: read the materials related to logistic regressors, embeddings and PyTorch linked in this <a href="text/#before-text1">section</a> and then complete <a href="https://forms.gle/V3U9MTHo7c9DNhkc6">this test</a> (deadline: 23:59 CET, Dec 04 2025). </li>
+<li>Assignments before the class of Nov 21, 2025: read the contents of section <a href="cl/">Introduction to computational linguistics and natural language processing</a>; after that, complete <a href="https://forms.gle/e17kghu2jdu3iiYp6">this test</a> (deadline: 23:59 CET, Nov 20 2025).</li>
+</ul>
+<h2 id="course-syllabus-and-rules">Course Syllabus and Rules<a class="headerlink" href="#course-syllabus-and-rules" title="Permanent link">&para;</a></h2>
+<p>These are the teaching materials for the course Técnicas de Procesamiento del Lenguaje Natural, coordinated by professor <a href="https://cvnet.cpd.ua.es/curriculum-breve/es/perez-ortiz-juan-antonio/15404">Juan Antonio Pérez Ortiz</a> (<a href="https://twitter.com/japer3z">@japer3z</a>) at the University of Alacant and also taught by professor <a href="https://cvnet.cpd.ua.es/curriculum-breve/es/espla-gomis-miquel/16262">Miquel Esplà Gomis</a>.</p>
+<p>For information regarding the course assessment, please refer to the <a href="https://cvnet.cpd.ua.es/Guia-Docente/GuiaDocente/Index?wlengua=es&amp;wcodasi=43505&amp;scaca=2025-26">course official info page</a>. Some additional aspects not covered in the syllabus include:</p>
+<ul>
+<li>Practical assignments are to be completed individually or in pairs, as indicated in each assignment description. Each of the course blocks (computational linguistics, text, speech) will have one or more practical assignments. The assignments in the first block contribute 25% to the final grade, the second block assignments contribute 55%, and the third block assignments contribute 20%. In case, the speech block has no practical assignments, the contributions of the first and second blocks will be 22% and 78%, respectively.</li>
+<li>Attendance in practical sessions is mandatory. Roll call will be taken in each in-person session. A maximum of 1 unexcused absence is allowed. If a student accumulates more unexcused absences than the allowed limit, they will not be able to pass the practical component of the course in the C2 examination. However, they will have the opportunity to pass it in the C4.</li>
+</ul>
+<p>The <a href="https://github.com/mespla/tpln2526">source code</a> of these pages, written in markdown for MkDocs, is available on GitHub.</p>
+<p>You can obtain a local copy of these pages (e.g., for offline access) by executing:</p>
+<pre><code>wget --mirror --no-parent --convert-links --page-requisites https://mespla.github.io/tpln2526
+</code></pre>
+<p>Please note that the content may change throughout the course.</p>
+<p>The course has three blocks:</p>
+<ul>
+<li>Block 1: <a href="cl/">Introduction to computational linguistics and natural language processing</a></li>
+<li>Block 2: <a href="text/">Architectures for written-text processing</a></li>
+<li>Block 3: <a href="speech/">Architectures for speech</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": [], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
